@@ -38,7 +38,7 @@
         [_tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
         [_tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
         [_tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
-        [_tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor],
+        [_tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
     ]];
     _tableView.delegate = self;
     _tableView.dataSource = self;
