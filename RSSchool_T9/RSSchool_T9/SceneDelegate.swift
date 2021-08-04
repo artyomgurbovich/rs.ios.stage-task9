@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let settingsViewController = SettingsViewController()
         settingsViewController.title = "Settings"
         navigationController.viewControllers = [settingsViewController]
-        tabBarController.viewControllers = [galleryViewController, navigationController]
+        tabBarController.viewControllers = [StoryContentViewController(), navigationController]
         galleryViewController.tabBarItem = UITabBarItem(title: "Items", image: UIImage(systemName: "square.grid.2x2"), tag: 0)
         settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 1)
         window?.rootViewController = tabBarController

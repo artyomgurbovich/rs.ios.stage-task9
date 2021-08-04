@@ -15,7 +15,7 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
     var titleLabel = UILabel()
     var typeLabel = UILabel()
     
-    private lazy var gradientLayer : CAGradientLayer = {
+    private lazy var gradientLayer: CAGradientLayer = {
         let gradient = CAGradientLayer()
         gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
         gradient.locations = [0.74, 1.0]
@@ -31,10 +31,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
-    }
-    
-    override func awakeFromNib() {
-        print("123")
     }
     
     func setup() {
