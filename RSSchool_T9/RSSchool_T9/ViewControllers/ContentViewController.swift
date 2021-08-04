@@ -36,6 +36,11 @@ class ContentViewController: UIViewController {
         setupBaseUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         tabBarController?.tabBar.isHidden = false
@@ -65,6 +70,7 @@ class ContentViewController: UIViewController {
     }
     
     func setupBaseUI() {
+        contentView.backgroundColor = .black
         contentView.addSubview(closeButton)
         contentView.addSubview(mainImageView)
         contentView.addSubview(titleLabel)
