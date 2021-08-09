@@ -52,7 +52,7 @@ class StoryContentViewController: ContentViewController, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCellIdentifier", for: indexPath)
-        if cell.layer.sublayers!.count > 1 {
+        if cell.layer.sublayers != nil, cell.layer.sublayers!.count > 1 {
             cell.layer.sublayers![1].removeFromSuperlayer()
         }
         cell.layer.addSublayer(createAnimation(index: indexPath.row))
@@ -60,7 +60,7 @@ class StoryContentViewController: ContentViewController, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if cell.layer.sublayers!.count > 1 {
+        if cell.layer.sublayers != nil, cell.layer.sublayers!.count > 1 {
             cell.layer.sublayers![1].removeFromSuperlayer()
         }
         cell.layer.addSublayer(createAnimation(index: indexPath.row))
